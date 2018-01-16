@@ -1,17 +1,25 @@
 CC := gcc
 CFLAGS := -g -Wall -lpthread 
 
-# all: checkdirs matrixgen serialtester main
-
-all: matrix 
+all: runtest 
 
 makedata: DevelopmentKitLab1/matrixgen
-	./DevelopmentKitLab1/matrixgen
-	mv data_input DevelopmentKitLab1/
+	@./DevelopmentKitLab1/matrixgen
 
 matrix: matrixmultiply.c DevelopmentKitLab1/lab1_IO.c
-	$(CC) $^ $(CFLAGS)
+	@$(CC) $^ $(CFLAGS) -o main
+
+runmatrix: 
+	@./main 4
+
+test: DevelopmentKitLab1/serialtester.c DevelopmentKitLab1/lab1_IO.c
+	@$(CC) $^ -o serialtester
+	@./serialtester
+
+runtest: makedata matrix runmatrix test clean
 
 clean:
-	rm -rf DevelopmentKitLab1/data_input
-	rm -rf a.out
+	@rm -rf data_input
+	@rm -rf data_output	
+	@rm -rf serialtester
+	@rm -rf a.out
