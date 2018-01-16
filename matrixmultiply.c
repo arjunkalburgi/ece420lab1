@@ -1,12 +1,18 @@
-#include "matrixmultiply.h"
 
+#include <stdio.h>
+#include <stdlib.h>
+#include <pthread.h>
+#include <math.h>
+#include "matrixmultiply.h"
+#include "DevelopmentKitLab1/lab1_IO.h"
+#include "DevelopmentKitLab1/timer.h"
 
 int main (int argc, char * argv[]){
 
     thread_number = get_num_threads(argc, argv);
-// 	pthread_t threads[thread_number];
+ 	pthread_t threads[thread_number];
 
-// 	Lab1_loadinput(&A, &B, &n);
+ 	Lab1_loadinput(&A, &B, &n);
 
 // 	create_result_matrix(n);
 
