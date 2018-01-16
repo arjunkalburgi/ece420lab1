@@ -17,9 +17,3 @@
 
 Additionally 
 > `make runtest` <!-- does all the above steps in one -->
-
-## Todo: 
-[ ] - main.c thread number input argument 
-[ ] - make matrix multiplcation function 
-[ ] - make thread functions
-[x] - makefile
