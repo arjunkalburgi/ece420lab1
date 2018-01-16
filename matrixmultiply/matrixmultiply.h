@@ -9,6 +9,6 @@
 #include "../DevelopmentKitLab1/timer.h"
 
 int **A; int **B; int **C; int n;
-int number_threads;
+int thread_number;
 
 #endif
