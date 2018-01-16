@@ -8,3 +8,6 @@
 > `bin/main <number of threads>` <!-- run program -->
 
 ## other:
+
+## Todo: 
+[ ] - main.c thread number input argument 
