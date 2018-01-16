@@ -1,34 +1,17 @@
 CC := gcc
-CFLAGS := -Wall -lpthread -lm
+CFLAGS := -g -Wall -lpthread 
 
-VPATH = src:sdk
-BUILDDIR = build
-BIN = bin
+# all: checkdirs matrixgen serialtester main
 
-all: checkdirs matrixgen serialtester main
+all: matrix 
 
+makedata: DevelopmentKitLab1/matrixgen
+	./DevelopmentKitLab1/matrixgen
+	mv data_input DevelopmentKitLab1/
 
-$(BUILDDIR)/%.o: %.c
-	$(CC) -c -o $@ $< $(CFLAGS)
-
-# main: $(BUILDDIR)/multiply.o $(BUILDDIR)/utilities.o $(BUILDDIR)/lab1_IO.o
-# 	$(CC) -o $(BIN)/main $^ $(CFLAGS)
-
-# matrixgen: build/matrixgen.o
-# 	$(CC) -o $(BIN)/matrixgen $<
-
-# serialtester: build/lab1_IO.o build/serialtester.o 
-# 	$(CC) -o $(BIN)/serialtester $^
-
-# checkdirs: $(BUILDDIR) $(BIN)
-
-# $(BUILDDIR):
-# 	@mkdir -p $@
-
-# $(BIN):
-# 	@mkdir -p $@	
+matrix: matrixmultiply.c DevelopmentKitLab1/lab1_IO.c
+	$(CC) $^ $(CFLAGS)
 
 clean:
-	rm -rf $(BUILDDIR) 
-	rm -rf $(BIN)
-	rm -f data_*
+	rm -rf DevelopmentKitLab1/data_input
+	rm -rf a.out
