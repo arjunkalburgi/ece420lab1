@@ -6,13 +6,13 @@ all: runtest
 makedata: DevelopmentKitLab1/matrixgen
 	@./DevelopmentKitLab1/matrixgen
 
-matrix: matrixmultiply.c DevelopmentKitLab1/lab1_IO.c
+matrix: matrixmultiply.c DevelopmentKitLab1/lab1_IO.c helper/helper.c
 	@$(CC) $^ $(CFLAGS) -o main
 
 runmatrix: 
 	@./main 4
 
-test: DevelopmentKitLab1/serialtester.c DevelopmentKitLab1/lab1_IO.c
+test: DevelopmentKitLab1/serialtester.c DevelopmentKitLab1/lab1_IO.c helper/helper.c
 	@$(CC) $^ -o serialtester
 	@./serialtester
 
