@@ -4,16 +4,20 @@
 # Multithreaded implementation of matrix multiply.
 
 ## Run instructions:
+
 > `make matrix` <!--build .main file -->
 > `./main <number of threads>` <!-- run program -->
 
 
 ## Other instructions:
-> `make makedata` <!-- create data_input file -->
-> `make matrix` <!-- create data_input file -->
-> `make runmatrix` <!-- run program -->
+### Testing functionality of the program is all automated 
+### through the Makefile. Breakdown: 
+
+> `make data` <!-- create data_input file -->
+> `make matrix` <!-- create matrixmultiply exe -->
+> `make run` <!-- run program -->
 > `make test` <!-- makes and runs serial tester -->
 > `make clean` <!-- remove all additional files -->
 
-Additionally 
-> `make runtest` <!-- does all the above steps in one -->
+### Additionally 
+> `make all` <!-- does all the above steps in one -->
