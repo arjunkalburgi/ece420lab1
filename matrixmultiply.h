@@ -1,3 +1,11 @@
+//---------------------------------------------//
+// ECE 420 Lab 1
+// Abid Rahman and Arjun Kalburgi
+// January, 2018
+// Filename: matrixmultiply.h
+//		- Header file for main program
+//---------------------------------------------//
+
 #ifndef MATRIXMULTIPLY_H
 #define MATRIXMULTIPLY_H
 
@@ -6,7 +14,6 @@
 #include <stdint.h>
 #include <pthread.h>
 #include <math.h>
-#include "helper/helper.h"
 #include "DevelopmentKitLab1/lab1_IO.h"
 #include "DevelopmentKitLab1/timer.h"
 
@@ -15,10 +22,10 @@ int thread_number;
 
 #define INT2VOIDP(i) (void *)(uintptr_t)(i)
 
-void create_result_matrix(int size);
 int multiply_vector(int i, int j);
-void solve_block(int row_lower_bound, int column_lower_bound, 
-	int row_upper_bound, int column_upper_bound);
-void* multiplyBlock(void* threadID);
+void* calculateMatrixBlock(void* threadID);
+
+int get_num_threads(int argc, char *argv[]);
+void print_usage();
 
 #endif

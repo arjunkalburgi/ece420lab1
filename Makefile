@@ -6,13 +6,13 @@ all: data matrix run test clean
 data: DevelopmentKitLab1/matrixgen
 	@./DevelopmentKitLab1/matrixgen
 
-matrix: matrixmultiply.c DevelopmentKitLab1/lab1_IO.c helper/helper.c
+matrix: matrixmultiply.c DevelopmentKitLab1/lab1_IO.c
 	@$(CC) $^ $(CFLAGS) -o main
 
 run: 
 	@./main 4
 
-test: DevelopmentKitLab1/serialtester.c DevelopmentKitLab1/lab1_IO.c helper/helper.c
+test: DevelopmentKitLab1/serialtester.c DevelopmentKitLab1/lab1_IO.c
 	@$(CC) $^ -o serialtester
 	@./serialtester
 
