@@ -22,4 +22,5 @@ clean:
 	@rm -rf data_input
 	@rm -rf data_output	
 	@rm -rf serialtester
-	@rm -rf a.out
+	@rm -rf main
+	@rm -rf main.dSYM

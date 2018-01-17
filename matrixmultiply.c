@@ -1,11 +1,4 @@
-
-#include <stdio.h>
-#include <stdlib.h>
-#include <pthread.h>
-#include <math.h>
 #include "matrixmultiply.h"
-#include "DevelopmentKitLab1/lab1_IO.h"
-#include "DevelopmentKitLab1/timer.h"
 
 int main (int argc, char * argv[]){
 
