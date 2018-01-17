@@ -1,5 +1,5 @@
 CC := gcc
-CFLAGS := -g -Wall -lpthread 
+CFLAGS := -g -Wall -lpthread -lm -std=gnu99
 
 all: data matrix run test clean 
 
@@ -10,7 +10,7 @@ matrix: matrixmultiply.c DevelopmentKitLab1/lab1_IO.c
 	@$(CC) $^ $(CFLAGS) -o main
 
 run: 
-	@./main 4
+	@./main 16
 
 test: DevelopmentKitLab1/serialtester.c DevelopmentKitLab1/lab1_IO.c
 	@$(CC) $^ -o serialtester

@@ -45,7 +45,7 @@ int main (int argc, char * argv[]){
 }
 
 void* calculateMatrixBlock(void* threadID) {
-	int k = (int) threadID;
+	unsigned int k = (uintptr_t) threadID;
 	int p = thread_number;
 
 	int x = k / sqrt(p);
