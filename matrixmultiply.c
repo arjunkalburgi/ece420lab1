@@ -15,7 +15,7 @@ int main (int argc, char * argv[]){
 
 	int i;
 	for (i = 0; i < thread_number; i++){
-		pthread_create(&threads[i], NULL, multiplyBlock, (void *) i);
+		pthread_create(&threads[i], NULL, multiplyBlock, INT2VOIDP(i));
 	}
 
 	for (i = 0; i < thread_number; i++){

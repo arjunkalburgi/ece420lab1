@@ -3,6 +3,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdint.h>
 #include <pthread.h>
 #include <math.h>
 #include "helper/helper.h"
@@ -11,6 +12,8 @@
 
 int **A; int **B; int **C; int n;
 int thread_number;
+
+#define INT2VOIDP(i) (void *)(uintptr_t)(i)
 
 void create_result_matrix(int size);
 int multiply_vector(int i, int j);
