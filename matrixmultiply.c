@@ -47,15 +47,16 @@ int main (int argc, char * argv[]){
 void* calculateMatrixBlock(void* threadID) {
 	unsigned int k = (uintptr_t) threadID;
 	int p = thread_number;
+	int rootp = sqrt(p);
 
-	int x = k / sqrt(p);
-	int y = (int) k % (int) sqrt(p);
+	int x = k / rootp;
+	int y = (int) k % (int) rootp;
 
-	int row_lower_bound = (n/sqrt(p)) * x;
-	int column_lower_bound = (n/sqrt(p)) * y;
+	int row_lower_bound = (n/rootp) * x;
+	int column_lower_bound = (n/rootp) * y;
 
-	int row_upper_bound = ((n/sqrt(p))*(x+1)) -1;
-	int column_upper_bound = ((n/sqrt(p))*(y+1)) -1;
+	int row_upper_bound = ((n/rootp)*(x+1)) -1;
+	int column_upper_bound = ((n/rootp)*(y+1)) -1;
 
 	for (int i = row_lower_bound; i <= row_upper_bound ; i++) {
 		for (int j = column_lower_bound; j <= column_upper_bound; j++) {
