@@ -1,19 +1,21 @@
 CC := gcc
 CFLAGS := -g -Wall -lpthread -lm -std=gnu99
 
-all: data matrix run test clean 
+all: data matrix run tester test clean 
 
-data: DevelopmentKitLab1/matrixgen
-	@./DevelopmentKitLab1/matrixgen
+data: matrixgen
+	@./matrixgen
 
-matrix: matrixmultiply.c DevelopmentKitLab1/lab1_IO.c
+matrix: matrixmultiply.c lab1_IO.c
 	@$(CC) $^ $(CFLAGS) -o main
 
 run: 
 	@./main 16
 
-test: DevelopmentKitLab1/serialtester.c DevelopmentKitLab1/lab1_IO.c
+tester: serialtester.c lab1_IO.c
 	@$(CC) $^ -o serialtester
+	
+test: 
 	@./serialtester
 
 clean:

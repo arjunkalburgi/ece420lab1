@@ -16,7 +16,8 @@
 > `make data` <!-- create data_input file -->
 > `make matrix` <!-- create matrixmultiply exe -->
 > `make run` <!-- run program -->
-> `make test` <!-- makes and runs serial tester -->
+> `make tester` <!-- makes serial tester -->
+> `make test` <!-- runs serial tester -->
 > `make clean` <!-- remove all additional files -->
 
 ### Additionally 
