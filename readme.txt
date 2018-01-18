@@ -14,7 +14,7 @@
 ### through the Makefile. Breakdown: 
 
 > `make data` <!-- create data_input file -->
-> `make matrix` <!-- create matrixmultiply exe -->
+> `make matrix` <!-- create main exe -->
 > `make run` <!-- run program -->
 > `make tester` <!-- makes serial tester -->
 > `make test` <!-- runs serial tester -->
