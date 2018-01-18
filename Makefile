@@ -1,5 +1,5 @@
 CC := gcc
-CFLAGS := -g -Wall -lpthread -lm -std=gnu99
+CFLAGS := -g -Wall -lpthread -lm -std=gnu99 -O3
 
 all: data matrix run tester test clean 
 
