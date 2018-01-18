@@ -22,3 +22,4 @@
 
 ### Additionally 
 > `make all` <!-- does all the above steps in one -->
+> './check.sh' <!-- runs the check script to test for times -->
