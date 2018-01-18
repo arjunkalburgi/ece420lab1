@@ -18,7 +18,8 @@
 #include "timer.h"
 
 int **A; int **B; int **C; int n;
-int thread_number;
+int static thread_number;
+int static rootp;
 
 #define INT2VOIDP(i) (void *)(uintptr_t)(i)
 

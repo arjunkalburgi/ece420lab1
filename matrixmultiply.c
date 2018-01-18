@@ -10,6 +10,7 @@
 int main (int argc, char * argv[]){
 
     thread_number = get_num_threads(argc, argv);
+	rootp = sqrt(thread_number);
  	pthread_t threads[thread_number];
 
 	//Load the input data
@@ -46,8 +47,6 @@ int main (int argc, char * argv[]){
 
 void* calculateMatrixBlock(void* threadID) {
 	unsigned int k = (uintptr_t) threadID;
-	int p = thread_number;
-	int rootp = sqrt(p);
 
 	int x = k / rootp;
 	int y = (int) k % (int) rootp;
