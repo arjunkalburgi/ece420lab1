@@ -22,4 +22,6 @@ Overview:
 	
 =====
 Please also find the details instructions in the comments of the individual files.
+Note: The compiled main executable in the .zip was compiled on the linux cloud server and will only run on a linux system. In order to run
+it on a different system, you must re compile the main executable using 'make matrix'.
 

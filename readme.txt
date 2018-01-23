@@ -15,7 +15,7 @@
 
 > `make data` <!-- create data_input file -->
 > `make matrix` <!-- create main exe -->
-> `make run` <!-- run program -->
+> `make run` <!-- run program with 16 threads-->
 > `make tester` <!-- makes serial tester -->
 > `make test` <!-- runs serial tester -->
 > `make clean` <!-- remove all additional files -->
@@ -23,3 +23,4 @@
 ### Additionally 
 > `make all` <!-- does all the above steps in one -->
 > './check.sh' <!-- runs the check script to test for times -->
+> Prior to running the check.sh script, run 'make data, make matrix, make tester'
